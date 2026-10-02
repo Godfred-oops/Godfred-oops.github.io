@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="560" viewBox="0 0 620 560" fill="none">
+  <title>From retrofit to recovery</title>
+  <desc>An architectural drawing of a timber home with a highlighted foundation, connected to a small community risk pool. A schematic sequence links retrofit, recovery, and shared resilience. No numerical results or design specifications are depicted.</desc>
+  <defs>
+    <pattern id="paper-grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" stroke="#d9dfd5" stroke-width=".5"/></pattern>
+    <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(30)"><path d="M0 0V6" stroke="#b8c2b3" stroke-width="1"/></pattern>
+  </defs>
+  <path fill="#f4f2e9" d="M0 0H620V560H0z"/>
+  <path fill="url(#paper-grid)" d="M24 115H596V435H24z" opacity=".7"/>
+  <g stroke="#bdc7ba" stroke-width=".8"><path d="M30 27H590M30 89H590M30 438H590M30 533H590"/><path d="M24 115h8M28 111v8M588 115h8M592 111v8M24 435h8M28 431v8M588 435h8M592 431v8"/></g>
+  <g fill="#67766a" font-family="'Segoe UI',Arial,sans-serif" font-size="9" letter-spacing="1.5"><text x="32" y="19">RESEARCH FIELD NOTES</text><text x="521" y="19">PLATE 01</text></g>
+  <text x="32" y="61" fill="#172b36" font-family="Georgia,serif" font-size="27">From retrofit to recovery.</text>
+  <text x="33" y="80" fill="#657368" font-family="'Segoe UI',Arial,sans-serif" font-size="10">A home, its foundation, and the community around it.</text>
+  <!-- A small timber house in axonometric projection. -->
+  <g stroke="#294a4a" stroke-width="1.45" stroke-linejoin="round">
+    <path d="M100 244l140 66 145-79-140-66z" fill="#e6e9de"/>
+    <path d="M100 244l70-76 140 66-70 76z" fill="#f8f6ee"/>
+    <path d="M170 168l145-79 140 66-145 79z" fill="#e2e7db"/>
+    <path d="M100 244v104l140 66V310z" fill="#f8f6ee"/>
+    <path d="M240 310v104l145-79V231z" fill="#edf0e6"/>
+    <path d="M100 348v22l140 66 145-79v-22l-145 79z" fill="url(#hatch)"/>
+    <path d="M100 260l140 66M100 279l140 66M100 298l140 66M100 317l140 66M240 326l145-79M240 345l145-79M240 364l145-79M240 383l145-79" stroke="#b5c1b1" stroke-width=".65"/>
+    <path d="M121 275l37 18v37l-37-18zM183 304l33 16v53l-33-16zM264 313l35-19v39l-35 19zM329 278l35-19v39l-35 19z" fill="#e0e7df"/>
+    <path d="M139 284v38M121 293l37 18M281 303v40M264 332l35-19M346 268v39M329 298l35-19" stroke-width=".8"/>
+    <path d="M157 215l27 13v-19l-14-22-13 8z" fill="#dfe5d9" stroke-width=".8"/>
+    <path d="M205 149l140 66M242 129l140 66M278 109l140 66" stroke="#abb9a9" stroke-width=".7"/>
+  </g>
+  <!-- Highlight the retrofit zone without implying a construction detail. -->
+  <g stroke="#b85a35" stroke-linejoin="round"><path d="M100 348l140 66 145-79" stroke-width="2.5"/><path d="M112 356l20 17-1-8M157 377l20 17-1-8M207 400l20 17-1-8M258 403l20-20v10M307 377l20-20v10M356 350l20-20v10" stroke-width="1.2"/></g>
+  <g stroke="#93a48f" stroke-width=".8" stroke-dasharray="3 4"><path d="M70 366l176 84 162-88"/><path d="M78 355V246h15"/></g>
+  <g fill="#b85a35" font-family="'Segoe UI',Arial,sans-serif" font-size="9"><circle cx="66" cy="245" r="11" fill="#f4f2e9" stroke="#b85a35"/><text x="60" y="248">01</text><text x="35" y="279" transform="rotate(-90 35 279)" letter-spacing="1">RETROFIT</text></g>
+  <!-- Homes contribute to a shared pool. Nodes are symbolic, not a dataset. -->
+  <g stroke="#7d9585" stroke-width="1"><path d="M439 155l61 45 61-45M500 200l61 69M500 200l-61 69M500 200v-81"/><path d="M405 277l34-8" stroke-dasharray="3 4"/></g>
+  <g stroke="#294a4a" stroke-width="1.1" fill="#f4f2e9">
+    <path d="M426 156v-14l13-10 13 10v14zM487 119v-14l13-10 13 10v14zM548 156v-14l13-10 13 10v14zM426 283v-14l13-10 13 10v14zM548 283v-14l13-10 13 10v14z"/>
+    <circle cx="500" cy="200" r="27" fill="#e8ded0" stroke="#b85a35"/>
+    <path d="M488 195a14 14 0 0 1 24-3l-1-7M512 205a14 14 0 0 1-24 3l1 7" stroke="#b85a35"/>
+  </g>
+  <g font-family="'Segoe UI',Arial,sans-serif" text-anchor="middle"><text x="500" y="309" fill="#172b36" font-size="11">Community risk pool</text><text x="500" y="326" fill="#657368" font-size="9">Reciprocal exchange</text><text x="500" y="365" fill="#657368" font-size="8" letter-spacing="1">HOUSEHOLD → COMMUNITY</text></g>
+  <!-- A conceptual sequence, not a measured recovery curve. -->
+  <path d="M60 477H556" stroke="#93a48f" stroke-width="1"/>
+  <g stroke="#b85a35" fill="#f4f2e9" stroke-width="1.3"><circle cx="80" cy="477" r="4"/><circle cx="286" cy="477" r="4"/><circle cx="516" cy="477" r="4"/></g>
+  <g fill="#172b36" font-family="'Segoe UI',Arial,sans-serif" font-size="11"><text x="60" y="501">Strengthen</text><text x="262" y="501">Recover</text><text x="478" y="501">Share risk</text></g>
+  <g fill="#657368" font-family="'Segoe UI',Arial,sans-serif" font-size="8"><text x="60" y="517">Seismic retrofit</text><text x="262" y="517">Functional recovery</text><text x="478" y="517">Collective resilience</text><text x="32" y="548">SCHEMATIC / NOT A DESIGN DETAIL OR RESEARCH RESULT</text><text x="526" y="548">G. O. ABABIO</text></g>
+</svg>
