@@ -31,3 +31,9 @@ html{scroll-padding-top:0}.hero{position:relative;background:#102b37;color:#f7f5
 /* Personal Adinkra artwork, displayed without altering the supplied drawing. */
 .identity-emblem{width:43px;height:43px;object-fit:contain;border-radius:4px;flex-shrink:0}.footer-name{display:inline-flex;align-items:center;gap:10px}.footer-emblem{width:30px;height:30px;object-fit:contain;border-radius:3px;flex-shrink:0}.footer-name>span{margin-left:-10px}
 @media(max-width:650px){.identity-emblem{width:38px;height:38px}.brand{gap:10px}}
+/* Restrained, one-time scroll reveals; never hide content while waiting to observe it. */
+@keyframes portfolio-reveal{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.scroll-reveal{animation:portfolio-reveal 550ms cubic-bezier(.2,.65,.3,1) var(--reveal-delay,0ms) backwards}
+.scroll-reveal:focus-within{animation:none}
+@media(prefers-reduced-motion:reduce){.scroll-reveal{animation:none!important}}
+@media print{.scroll-reveal{animation:none!important}}

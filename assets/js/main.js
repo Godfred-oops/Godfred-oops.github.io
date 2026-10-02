@@ -110,3 +110,37 @@ if (photoDialog && typeof photoDialog.showModal === 'function') {
     photoTrigger?.focus({ preventScroll: true });
   });
 }
+
+// One-time scroll reveals. Content stays visible if scripting or observation is unavailable.
+const scrollMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const revealTargets = [...document.querySelectorAll('.section-title-row, .research-heading, .research-interests, .project-card, .earlier-project, .publication, .event-photo, .facts, .education, .timeline article, .detail-card, .volunteer-card, .service-note, .cv-panel, .contact-grid, .additional-presentation, .section-disclosure')];
+const revealedTargets = new WeakSet();
+let revealObserver;
+function configureScrollReveals() {
+  revealObserver?.disconnect();
+  if (scrollMotion.matches || !('IntersectionObserver' in window)) {
+    revealTargets.forEach(target => target.classList.remove('scroll-reveal'));
+    return;
+  }
+  revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const target = entry.target;
+      target.classList.add('scroll-reveal');
+      revealedTargets.add(target);
+      revealObserver.unobserve(target);
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
+  revealTargets.forEach(target => {
+    if (revealedTargets.has(target)) return;
+    // Stagger only siblings that share a card or photo grid.
+    const group = target.parentElement;
+    if (group.matches('.project-grid, .event-photo-grid, .volunteer-grid')) {
+      const index = [...group.children].indexOf(target);
+      target.style.setProperty('--reveal-delay', `${(index % 2) * 90}ms`);
+    }
+    revealObserver.observe(target);
+  });
+}
+scrollMotion.addEventListener('change', configureScrollReveals);
+configureScrollReveals();
