@@ -35,3 +35,5 @@ Four card-specific SVGs have valid XML, descriptive alternative text, and workin
 ## Static PNG exports
 
 All five illustrations are now displayed as high-resolution PNGs. Each has one frame, returns HTTP 200, and loads in the browser. SVG sources remain available for future edits.
+
+- Research scroll sequence: all four scenes verified in a motion-enabled local fixture; skip link reaches detailed cards. Mobile layouts checked at 390×844 and 320×568, desktop at 1280×800. No horizontal overflow or browser errors. Actual reduced-motion preference verified: sequence hidden, all four detailed cards available. Local asset links and anchors validated; JavaScript syntax checked.

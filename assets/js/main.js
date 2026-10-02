@@ -144,3 +144,39 @@ function configureScrollReveals() {
 }
 scrollMotion.addEventListener('change', configureScrollReveals);
 configureScrollReveals();
+
+// A short sticky research sequence, driven by the browser's ordinary scroll.
+const researchStory = document.querySelector('.research-story');
+if (researchStory) {
+  const stage = researchStory.querySelector('.research-story-stage');
+  const scenes = [...researchStory.querySelectorAll('.research-scene')];
+  const steps = [...researchStory.querySelectorAll('.research-story-step')];
+  let activeScene = -1;
+  let storyFrame = false;
+  function updateResearchStory() {
+    storyFrame = false;
+    if (researchStory.hidden) return;
+    const top = parseFloat(getComputedStyle(stage).top) || 0;
+    const distance = researchStory.offsetHeight - stage.offsetHeight;
+    const progress = Math.max(0, Math.min(1, (top - researchStory.getBoundingClientRect().top) / Math.max(1, distance)));
+    const index = Math.min(scenes.length - 1, Math.floor(progress * scenes.length));
+    if (index === activeScene) return;
+    activeScene = index;
+    scenes.forEach((scene, i) => { scene.hidden = i !== index; });
+    steps.forEach((step, i) => step.classList.toggle('is-active', i === index));
+  }
+  function requestStoryUpdate() {
+    if (storyFrame || researchStory.hidden) return;
+    storyFrame = true;
+    requestAnimationFrame(updateResearchStory);
+  }
+  function configureResearchStory() {
+    researchStory.hidden = scrollMotion.matches;
+    activeScene = -1;
+    updateResearchStory();
+  }
+  window.addEventListener('scroll', requestStoryUpdate, { passive: true });
+  window.addEventListener('resize', requestStoryUpdate);
+  scrollMotion.addEventListener('change', configureResearchStory);
+  configureResearchStory();
+}
