@@ -8,9 +8,9 @@ Open `index.html`, or run `python -m http.server 8000` from this directory and v
 
 ## Content and source
 
-Academic content is based on `assets/documents/Ababio_CV.docx`. The original Word document is linked from the CV section without modification. The site includes education, research interests, research experience, teaching, mentoring, awards, volunteering, one published article, two manuscripts explicitly in preparation, and four conference presentations.
+Academic content is based on `assets/documents/Godfred_Ababio_CV.pdf`. The CV section opens `cv.html`, which displays the supplied PDF and offers separate open and download links. The PDF is preserved without modification. The site includes education, research interests, research experience, teaching, mentoring, awards, volunteering, one published article, two manuscripts explicitly in preparation, and four conference presentations.
 
-The four main research cards describe connected areas within the CV's integrated seismic risk, recovery, and risk-sharing program (2023–present). The earlier machine-learning project (2022–2023) appears separately. Card headings are descriptive summaries of the CV, not formal grant or project titles. The Ph.D. is shown as expected in 2027, consistent with current candidate status.
+The four main research cards describe connected areas within the CV's research on quantifying and mitigating seismic risk disparities in residential communities (2023–present). The earlier machine-learning project (2022–2023) appears separately. Card headings are descriptive summaries of the CV, not formal grant or project titles. The Ph.D. is shown as expected in 2027, consistent with current candidate status.
 
 The published article DOI and volume were verified against the publisher: https://doi.org/10.1016/j.ijdrr.2026.106177. No publication date is asserted for the in-preparation manuscripts.
 
@@ -24,9 +24,9 @@ Original photos are preserved. Presentation and volunteer images use lazy loadin
 
 When adding a future event, include a visible caption with its verified name, location, and date. Add the image under the appropriate existing folder and use its exact filename, including case, since GitHub Pages is case-sensitive.
 
-## Optional PDF CV
+## Updating the CV
 
-To provide a PDF instead of Word, place an exported PDF in `assets/documents/`, update the CV link and its download filename, and change the visible format labels to PDF. Do not rename the DOCX extension to PDF.
+Replace `assets/documents/Godfred_Ababio_CV.pdf` with the current exported PDF. The viewer and download use this same file. If its filename changes, update all references in `cv.html`. Review the portfolio summaries separately when research or other details change.
 
 ## Files
 
@@ -34,7 +34,7 @@ To provide a PDF instead of Word, place an exported PDF in `assets/documents/`, 
 - `assets/css/style.css`: design and responsive layouts.
 - `assets/js/main.js`: mobile menu and navigation tracking.
 - `assets/images/`: original conceptual SVG illustrations.
-- `assets/documents/Ababio_CV.docx`: supplied original CV.
+- `assets/documents/Godfred_Ababio_CV.pdf`: supplied original CV.
 - `.nojekyll`: plain static GitHub Pages hosting.
 - `CHECKS.md`: verification scope and remaining content.
 
